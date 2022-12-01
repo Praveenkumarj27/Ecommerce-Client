@@ -36,3 +36,85 @@
     transform: rotate(360deg);
   }
 }
+.App {
+  text-align: center;
+  height: 100vh;
+}
+
+.form {
+  margin-top: 100px;
+
+  /* border: 1px solid black; */
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.heading {
+  background-color: rgb(238, 245, 245);
+  border-bottom: 1px solid rgb(180, 175, 175);
+  padding: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.form-body {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+input[type="email"] {
+  background: transparent;
+  border: none;
+  margin-bottom: 20px;
+  border-bottom: 1px solid rgb(180, 175, 175);
+  border-radius: 0%;
+}
+input[type="password"] {
+  background: transparent;
+  margin-bottom: 20px;
+  border: none;
+  border-bottom: 1px solid rgb(180, 175, 175);
+  border-radius: 0%;
+}
+input[type="text"] {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgb(180, 175, 175);
+  border-radius: 0%;
+}
+
+h6 {
+  color: rgb(102, 98, 98);
+  font-weight: lighter;
+}
+
+a {
+  text-decoration: none;
+}
+
+.submit-button {
+  border-radius: 50px;
+  background-color: #2690d9;
+  width: 100%;
+}
+
+body {
+ 
+  background: rgb(77, 147, 127);
+  background: linear-gradient(
+    90deg,
+    rgba(77, 147, 127, 0.9864320728291317) 42%,
+    rgba(67, 131, 150, 1) 100%
+  );
+}
+.login {
+  text-align: center;
+}
+.signup {
+  text-align: center;
+}
+
+.container {
+  margin-top: 40px;
+}
