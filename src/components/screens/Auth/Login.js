@@ -6,6 +6,7 @@ import { login } from "../../../Redux/Actions/UserActions";
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [role, setRole] = useState("");
 
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -13,11 +14,16 @@ const Login = () => {
   const userLogin = useSelector((state) => state.userLogin);
   const { loading } = userLogin;
 
+ 
+
   // Form Submission
   const handleSubmit = (e) => {
+    // localStorage.setItem("role",role);
     e.preventDefault();
     dispatch(login({ email, password }, navigate));
   };
+
+
 
   return (
     <>

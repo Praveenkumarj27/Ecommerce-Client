@@ -10,6 +10,9 @@ const Navbar = () => {
   const userLogin = useSelector((state) => state.userLogin);
   const { userInfo } = userLogin;
 
+  const role= localStorage.getItem("role");
+  console.log(role);
+
   document.onclick = function (e) {
     if (e.target.id !== "toggle" && e.target.id !== "navbar") {
       setToggle(false);
@@ -24,9 +27,12 @@ const Navbar = () => {
     if (userInfo && userInfo.msg) {
       return [
         <>
+       
+       {role === "admin"?( 
           <li>
             <Link to="/add">Add Products</Link>
           </li>
+       ):null}
           <li>
             <Link to="/card">Basket</Link>
           </li>

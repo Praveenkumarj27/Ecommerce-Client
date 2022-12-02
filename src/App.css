@@ -100,7 +100,6 @@ a {
 }
 
 body {
- 
   background: rgb(77, 147, 127);
   background: linear-gradient(
     90deg,
@@ -117,4 +116,10 @@ body {
 
 .container {
   margin-top: 40px;
+}
+.loading{
+  text-align: center;
+  margin-top: 150px;
+  margin-left: 420px;
+  color: white;
 }

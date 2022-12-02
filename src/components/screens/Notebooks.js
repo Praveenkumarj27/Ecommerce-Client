@@ -37,7 +37,7 @@ const Notebooks = () => {
         {!loading ? (
           notebooks?.map((item) => <Notebook item={item} />)
         ) : (
-          <h1>Not Found Notebook</h1>
+          <h1 className="loading">loading...</h1>
         )}
       </div>
       {/* Pagination */}

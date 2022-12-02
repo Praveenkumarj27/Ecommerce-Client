@@ -11,6 +11,7 @@ const Register = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirm, setConfirm] = useState("");
+  const [role, setRole] = useState("");
 
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -37,6 +38,7 @@ const Register = () => {
         localStorage.setItem("name", name);
         localStorage.setItem("email", email);
         localStorage.setItem("profilePic", profilePic);
+        // localStorage.setItem("role",role);
       })
       .catch((error) => {
         console.log(error);
@@ -46,7 +48,7 @@ const Register = () => {
     <>
       <div className="container col-sm-12 col-md-12 col-lg-4 p-0 form">
         <div className="heading">
-        <h1 className='signup'>Sign Up</h1>
+          <h1 className="signup">Sign Up</h1>
         </div>
 
         <div className="container form-body pb-4 ps-4 pe-4">
@@ -73,6 +75,32 @@ const Register = () => {
                 onChange={(e) => setEmail(e.target.value)}
               />
             </div>
+            {/* <div class="form-check form-check-inline">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="inlineRadioOptions"
+                id="inlineRadio1"
+                value="Admin"
+                onChange={(e) => setRole(e.target.value)}
+              />
+              <label class="form-check-label" for="inlineRadio1">
+                Admin
+              </label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="inlineRadioOptions"
+                id="inlineRadio2"
+                value="User"
+                onChange={(e) => setRole(e.target.value)}
+              />
+              <label class="form-check-label" for="inlineRadio2">
+               User
+              </label>
+            </div> */}
             <div class="mb-3 mt-3">
               <input
                 type="password"

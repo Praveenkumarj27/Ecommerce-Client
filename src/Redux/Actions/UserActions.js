@@ -57,6 +57,8 @@ export const login = (logData, navigate) => async (dispatch) => {
     dispatch({ type: USER_LOGIN_SUCCESS, payload: data });
 
     localStorage.setItem("userInfo", JSON.stringify(data));
+    localStorage.setItem("role", data.user.role);
+
   } catch (error) {
     dispatch({
       type: USER_LOGIN_FAIL,
@@ -108,6 +110,7 @@ export const getOrdered = () => async (dispatch) => {
 // LOGOUT
 export const logout = () => (dispatch) => {
   localStorage.removeItem("userInfo");
+  localStorage.removeItem("role");
   dispatch({ type: USER_LOGOUT });
   document.location.href = "/login";
   toast.error("Be healthy until you see !");
